@@ -12,7 +12,7 @@ public class Mano {
 	 */
 	public Mano(final Forma forma) {
 		this.valor = forma;
-		//Diefinir Constructor//throw new RuntimeException("No implementado aún");
+		//throw new RuntimeException("No implementado aún");
 	}
 
 	/**
@@ -22,34 +22,39 @@ public class Mano {
 	 * @return un Resultado, de acuerdo al estado del juego.
 	 */
 	public Resultado jugarCon(final Mano otra) {
-		
-		if (this.valor == Forma.PIEDRA && (otra.valor == Forma.LAGARTO || otra.valor == Forma.TIJERA))
+		if (this.valor == Forma.PIEDRA && (otra.valor == Forma.LAGARTO || otra.valor == Forma.TIJERA)) {
 			return Resultado.GANA;
-		if (this.valor == Forma.PIEDRA && (otra.valor == Forma.SPOCK || otra.valor == Forma.PAPEL))
+		}
+		if (this.valor == Forma.PIEDRA && (otra.valor == Forma.SPOCK || otra.valor == Forma.PAPEL)) {
 			return Resultado.PIERDE;
-		
-		if (this.valor == Forma.SPOCK && (otra.valor == Forma.TIJERA || otra.valor == Forma.PIEDRA))
+		}
+		if (this.valor == Forma.SPOCK && (otra.valor == Forma.TIJERA || otra.valor == Forma.PIEDRA)) {
 			return Resultado.GANA;
-		if (this.valor == Forma.SPOCK && (otra.valor == Forma.PAPEL || otra.valor == Forma.LAGARTO))
+		}
+		if (this.valor == Forma.SPOCK && (otra.valor == Forma.PAPEL || otra.valor == Forma.LAGARTO)) {
 			return Resultado.PIERDE;
-		
-		if (this.valor == Forma.PAPEL && (otra.valor == Forma.PIEDRA || otra.valor == Forma.SPOCK))
+		}
+		if (this.valor == Forma.PAPEL && (otra.valor == Forma.PIEDRA || otra.valor == Forma.SPOCK)) {
 			return Resultado.GANA;
-		if (this.valor == Forma.PAPEL && (otra.valor == Forma.TIJERA || otra.valor == Forma.LAGARTO))
+		}
+		if (this.valor == Forma.PAPEL && (otra.valor == Forma.TIJERA || otra.valor == Forma.LAGARTO)) {
 			return Resultado.PIERDE;
-		
-		if (this.valor == Forma.LAGARTO && (otra.valor == Forma.PAPEL || otra.valor == Forma.SPOCK))
+		}
+		if (this.valor == Forma.LAGARTO && (otra.valor == Forma.PAPEL || otra.valor == Forma.SPOCK)) {
 			return Resultado.GANA;
-		if (this.valor == Forma.LAGARTO && (otra.valor == Forma.TIJERA || otra.valor == Forma.PIEDRA))
+		}
+		if (this.valor == Forma.LAGARTO && (otra.valor == Forma.TIJERA || otra.valor == Forma.PIEDRA)) {
 			return Resultado.PIERDE;
-
-		if (this.valor == Forma.TIJERA && (otra.valor == Forma.PAPEL || otra.valor == Forma.LAGARTO))
+		}
+		if (this.valor == Forma.TIJERA && (otra.valor == Forma.PAPEL || otra.valor == Forma.LAGARTO)) {
 			return Resultado.GANA;
-		if (this.valor == Forma.TIJERA && (otra.valor == Forma.SPOCK || otra.valor == Forma.PIEDRA))
+		}
+		if (this.valor == Forma.TIJERA && (otra.valor == Forma.SPOCK || otra.valor == Forma.PIEDRA)) {
 			return Resultado.PIERDE;
-		
+		}
 		return Resultado.EMPATA;
 			//throw new RuntimeException("No implementado aún");
 	}
 
 }
+	
